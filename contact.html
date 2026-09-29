@@ -13,13 +13,50 @@
     >
 
     <meta name="author" content="H Mantra">
+    <meta name="theme-color" content="#080808">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="H Mantra">
+    <meta property="og:title" content="Contact | H Mantra">
+    <meta property="og:description" content="Contact H Mantra for interior, furniture, colour and project work enquiries.">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/images/logo/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "H Mantra",
+  "alternateName": "Tanki Project Works",
+  "description": "Interior projects, furniture, colour solutions and complete project works.",
+  "telephone": [
+    "+919106940350",
+    "+919265605780"
+  ],
+  "email": "hmantra1996@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sunshine Market, Kadi Chokdi",
+    "addressLocality": "Visnagar",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.instagram.com/hmantra1996/"
+  ]
+}
+    </script>
     <title>Contact | H Mantra</title>
 
 </head>
 
 
 <body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
 
 
     <!-- ==================== HEADER ==================== -->
@@ -33,7 +70,7 @@
                 aria-label="H Mantra Home"
             >
 
-                <img id="logoh" src="assets/images/logo/logo-h.png" alt="">
+                <img class="logo-h" src="assets/images/logo/logo-h.png" alt="" width="562" height="103">
 
                 <span>
                     TANKI PROJECT WORKS
@@ -95,7 +132,7 @@
     </header>
 
 
-    <main>
+    <main id="main">
 
 
         <!-- ==================== CONTACT HERO ==================== -->
@@ -210,35 +247,14 @@
                     <p>
 
                         <a
-                            href="https://www.instagram.com/hmantra1996/"
+                            href="https://www.instagram.com/h_mantra_furniture_interior/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            @hmantra1996
+                            @h_mantra_furniture_interior
                         </a>
 
                     </p>
-
-                </article>
-
-
-                <!-- LOCATION -->
-
-                <article>
-
-                    <h3>
-                        Location
-                    </h3>
-
-                    <address>
-
-                        <p>
-                            Sunshine Market,
-                            Kadi Chokdi,
-                            Visnagar
-                        </p>
-
-                    </address>
 
                 </article>
 
@@ -310,18 +326,13 @@
 
 
             <!--
-                IMPORTANT:
-                This form currently has NO backend.
-
-                Later we can connect it to:
-                - WhatsApp
-                - Formspree
-                - Web3Forms
-                - EmailJS
-                - Another form service
+                No backend: assets/js/main.js turns the submitted fields into a
+                WhatsApp message to the number below. To switch to email delivery
+                later, point the form at Web3Forms / Formspree and remove the
+                handler in main.js.
             -->
 
-            <form action="#" method="post">
+            <form id="enquiry-form" action="#" method="post" data-whatsapp="919106940350" novalidate>
 
 
                 <div>
@@ -437,52 +448,10 @@
                     Send Enquiry
                 </button>
 
+                <p id="form-note" role="status" aria-live="polite">Your enquiry opens in WhatsApp, ready to send.</p>
+
 
             </form>
-
-        </section>
-
-
-        <!-- ==================== MAP ==================== -->
-
-        <section
-            id="location"
-            aria-labelledby="location-title"
-        >
-
-            <header>
-
-                <p>
-                    FIND US
-                </p>
-
-                <h2 id="location-title">
-                    Our Location
-                </h2>
-
-            </header>
-
-
-            <!--
-                Google Maps iframe will be added after
-                confirming the exact business location.
-            -->
-
-            <div>
-
-                <p>
-                    Sunshine Market, Kadi Chokdi, Visnagar
-                </p>
-
-                <a
-                    href="https://www.google.com/maps/search/?api=1&query=Sunshine+Market+Kadi+Chokdi+Visnagar"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Open in Google Maps
-                </a>
-
-            </div>
 
         </section>
 
@@ -525,9 +494,9 @@
 
         <div>
 
-            <a href="index.html">
+            <a href="index.html" aria-label="H Mantra Home">
 
-                <img id="logoh" src="assets/images/logo/logo-h.png" alt="">
+                <img class="logo-h" src="assets/images/logo/logo-h.png" alt="" width="562" height="103">
 
             </a>
 

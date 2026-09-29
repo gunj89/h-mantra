@@ -12,12 +12,25 @@
     >
 
     <meta name="author" content="H Mantra">
+    <meta name="theme-color" content="#080808">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="H Mantra">
+    <meta property="og:title" content="Portfolio | H Mantra">
+    <meta property="og:description" content="Explore the H Mantra portfolio of interior projects, furniture, colour work and project works.">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/images/logo/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
     <title>Portfolio | H Mantra</title>
 
 </head>
 
 <body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
 
 
     <!-- ==================== HEADER ==================== -->
@@ -28,7 +41,7 @@
 
             <a href="index.html" aria-label="H Mantra Home">
 
-                <img id="logoh" src="assets/images/logo/logo-h.png" alt="">
+                <img class="logo-h" src="assets/images/logo/logo-h.png" alt="" width="562" height="103">
                 <span>TANKI PROJECT WORKS</span>
 
             </a>
@@ -87,7 +100,7 @@
     </header>
 
 
-    <main>
+    <main id="main">
 
 
         <!-- ==================== PAGE HERO ==================== -->
@@ -110,272 +123,500 @@
 
         <!-- ==================== PORTFOLIO FILTERS ==================== -->
 
-        <section
-            id="portfolio"
-            aria-labelledby="portfolio-title"
-        >
+        <section id="portfolio" aria-labelledby="portfolio-title">
 
             <header>
-
                 <p>OUR WORK</p>
-
-                <h2 id="portfolio-title">
-                    Explore Our Projects
-                </h2>
-
+                <h2 id="portfolio-title">Explore Our Projects</h2>
             </header>
 
+            <nav aria-label="Portfolio Categories" id="portfolio-filters">
+                <button type="button" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" data-filter="interior" aria-pressed="false">Interior</button>
+                <button type="button" data-filter="living-room" aria-pressed="false">Living Room</button>
+                <button type="button" data-filter="bedroom" aria-pressed="false">Bedroom</button>
+                <button type="button" data-filter="kitchen" aria-pressed="false">Kitchen</button>
+                <button type="button" data-filter="furniture" aria-pressed="false">Furniture</button>
+                <button type="button" data-filter="mandir" aria-pressed="false">Mandir</button>
+                <button type="button" data-filter="wall-ceiling" aria-pressed="false">Wall &amp; Ceiling</button>
+            </nav>
 
-            <!--
-                These buttons will later be connected
-                to JavaScript for filtering.
-            -->
-
-            <!-- <nav
-                aria-label="Portfolio Categories"
-                id="portfolio-filters"
-            >
-
-                <button type="button">
-                    All
-                </button>
-
-                <button type="button">
-                    Interior
-                </button>
-
-                <button type="button">
-                    Living Room
-                </button>
-
-                <button type="button">
-                    Bedroom
-                </button>
-
-                <button type="button">
-                    Kitchen
-                </button>
-
-                <button type="button">
-                    Furniture
-                </button>
-
-                <button type="button">
-                    Colour & Finishing
-                </button>
-
-            </nav> -->
-
+            <p id="portfolio-count" role="status" aria-live="polite"></p>
 
             <!-- ==================== GALLERY ==================== -->
+            <div id="portfolio-gallery" aria-label="H Mantra Project Gallery">
 
-            <div
-                id="portfolio-gallery"
-                aria-label="H Mantra Project Gallery"
-            >
-
-
-                <!-- PROJECT 01 -->
-
-                <figure
-                    class="portfolio-item"
-                    data-category="interior"
-                >
-
-                    <a href="assets/images/project-01.jpg">
-
-                        <img
-                            src="assets/images/project-01.jpg"
-                            alt="H Mantra interior project"
-                            loading="lazy"
-                        >
-
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-67.jpg" data-caption="Backlit Panel Wall">
+                        <img src="assets/images/projects/project-67.jpg" alt="Backlit Panel Wall - H Mantra project" width="1055" height="1400" loading="lazy" decoding="async">
                     </a>
-
-                    <figcaption>
-                        Interior Project
-                    </figcaption>
-
+                    <figcaption>Backlit Panel Wall</figcaption>
                 </figure>
 
-
-                <!-- PROJECT 02 -->
-
-                <figure
-                    class="portfolio-item"
-                    data-category="living-room"
-                >
-
-                    <a href="assets/images/project-02.jpg">
-
-                        <img
-                            src="assets/images/project-02.jpg"
-                            alt="H Mantra living room project"
-                            loading="lazy"
-                        >
-
+                <figure class="portfolio-item" data-category="living-room">
+                    <a href="assets/images/projects/project-66.jpg" data-caption="TV Unit Wall">
+                        <img src="assets/images/projects/project-66.jpg" alt="TV Unit Wall - H Mantra project" width="1400" height="1051" loading="lazy" decoding="async">
                     </a>
-
-                    <figcaption>
-                        Living Room
-                    </figcaption>
-
+                    <figcaption>TV Unit Wall</figcaption>
                 </figure>
 
-
-                <!-- PROJECT 03 -->
-
-                <figure
-                    class="portfolio-item"
-                    data-category="bedroom"
-                >
-
-                    <a href="assets/images/project-03.jpg">
-
-                        <img
-                            src="assets/images/project-03.jpg"
-                            alt="H Mantra bedroom project"
-                            loading="lazy"
-                        >
-
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-22.jpg" data-caption="Bedroom Feature Wall">
+                        <img src="assets/images/projects/project-22.jpg" alt="Bedroom Feature Wall - H Mantra project" width="512" height="384" loading="lazy" decoding="async">
                     </a>
-
-                    <figcaption>
-                        Bedroom
-                    </figcaption>
-
+                    <figcaption>Bedroom Feature Wall</figcaption>
                 </figure>
 
-
-                <!-- PROJECT 04 -->
-
-                <figure
-                    class="portfolio-item"
-                    data-category="kitchen"
-                >
-
-                    <a href="assets/images/project-04.jpg">
-
-                        <img
-                            src="assets/images/project-04.jpg"
-                            alt="H Mantra kitchen project"
-                            loading="lazy"
-                        >
-
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-17.jpg" data-caption="Bedroom Feature Wall">
+                        <img src="assets/images/projects/project-17.jpg" alt="Bedroom Feature Wall - H Mantra project" width="360" height="360" loading="lazy" decoding="async">
                     </a>
-
-                    <figcaption>
-                        Kitchen
-                    </figcaption>
-
+                    <figcaption>Bedroom Feature Wall</figcaption>
                 </figure>
 
-
-                <!-- PROJECT 05 -->
-
-                <figure
-                    class="portfolio-item"
-                    data-category="furniture"
-                >
-
-                    <a href="assets/images/project-05.jpg">
-
-                        <img
-                            src="assets/images/project-05.jpg"
-                            alt="H Mantra furniture project"
-                            loading="lazy"
-                        >
-
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-42.jpg" data-caption="Bar Stools">
+                        <img src="assets/images/projects/project-42.jpg" alt="Bar Stools - H Mantra project" width="1080" height="1282" loading="lazy" decoding="async">
                     </a>
-
-                    <figcaption>
-                        Furniture
-                    </figcaption>
-
+                    <figcaption>Bar Stools</figcaption>
                 </figure>
 
-
-                <!-- PROJECT 06 -->
-
-                <figure
-                    class="portfolio-item"
-                    data-category="interior"
-                >
-
-                    <a href="assets/images/project-06.jpg">
-
-                        <img
-                            src="assets/images/project-06.jpg"
-                            alt="H Mantra interior project"
-                            loading="lazy"
-                        >
-
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-65.jpg" data-caption="Hexagon Display Shelf">
+                        <img src="assets/images/projects/project-65.jpg" alt="Hexagon Display Shelf - H Mantra project" width="918" height="1400" loading="lazy" decoding="async">
                     </a>
-
-                    <figcaption>
-                        Interior Project
-                    </figcaption>
-
+                    <figcaption>Hexagon Display Shelf</figcaption>
                 </figure>
 
-
-                <!-- PROJECT 07 -->
-
-                <figure
-                    class="portfolio-item"
-                    data-category="interior"
-                >
-
-                    <a href="assets/images/project-07.jpg">
-
-                        <img
-                            src="assets/images/project-07.jpg"
-                            alt="H Mantra interior project"
-                            loading="lazy"
-                        >
-
+                <figure class="portfolio-item" data-category="mandir">
+                    <a href="assets/images/projects/project-57.jpg" data-caption="Mandir Unit">
+                        <img src="assets/images/projects/project-57.jpg" alt="Mandir Unit - H Mantra project" width="1080" height="1387" loading="lazy" decoding="async">
                     </a>
-
-                    <figcaption>
-                        Interior Project
-                    </figcaption>
-
+                    <figcaption>Mandir Unit</figcaption>
                 </figure>
 
-
-                <!-- PROJECT 08 -->
-
-                <figure
-                    class="portfolio-item"
-                    data-category="furniture"
-                >
-
-                    <a href="assets/images/project-08.jpg">
-
-                        <img
-                            src="assets/images/project-08.jpg"
-                            alt="H Mantra furniture project"
-                            loading="lazy"
-                        >
-
+                <figure class="portfolio-item" data-category="mandir">
+                    <a href="assets/images/projects/project-60.jpg" data-caption="Mandir with Jaali Door">
+                        <img src="assets/images/projects/project-60.jpg" alt="Mandir with Jaali Door - H Mantra project" width="875" height="1400" loading="lazy" decoding="async">
                     </a>
-
-                    <figcaption>
-                        Furniture
-                    </figcaption>
-
+                    <figcaption>Mandir with Jaali Door</figcaption>
                 </figure>
 
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-54.jpg" data-caption="Outdoor Seating">
+                        <img src="assets/images/projects/project-54.jpg" alt="Outdoor Seating - H Mantra project" width="1080" height="1067" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Outdoor Seating</figcaption>
+                </figure>
 
-                <!--
-                    Continue the same structure for
-                    project-09.jpg through project-67.jpg.
-                -->
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-50.jpg" data-caption="Centre Table">
+                        <img src="assets/images/projects/project-50.jpg" alt="Centre Table - H Mantra project" width="1080" height="509" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Centre Table</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-38.jpg" data-caption="False Ceiling Design">
+                        <img src="assets/images/projects/project-38.jpg" alt="False Ceiling Design - H Mantra project" width="1074" height="817" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>False Ceiling Design</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-20.jpg" data-caption="Bed with Panelled Wall">
+                        <img src="assets/images/projects/project-20.jpg" alt="Bed with Panelled Wall - H Mantra project" width="384" height="512" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Bed with Panelled Wall</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-28.jpg" data-caption="Panelled Wardrobe &amp; Bed">
+                        <img src="assets/images/projects/project-28.jpg" alt="Panelled Wardrobe &amp; Bed - H Mantra project" width="359" height="484" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Panelled Wardrobe &amp; Bed</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-25.jpg" data-caption="Bedroom Interior">
+                        <img src="assets/images/projects/project-25.jpg" alt="Bedroom Interior - H Mantra project" width="512" height="342" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Bedroom Interior</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-39.jpg" data-caption="Bed with Wooden Panel">
+                        <img src="assets/images/projects/project-39.jpg" alt="Bed with Wooden Panel - H Mantra project" width="717" height="541" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Bed with Wooden Panel</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="interior">
+                    <a href="assets/images/projects/project-01.jpg" data-caption="Entrance Foyer &amp; Partition">
+                        <img src="assets/images/projects/project-01.jpg" alt="Entrance Foyer &amp; Partition - H Mantra project" width="239" height="423" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Entrance Foyer &amp; Partition</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-02.jpg" data-caption="Study Desk">
+                        <img src="assets/images/projects/project-02.jpg" alt="Study Desk - H Mantra project" width="512" height="384" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Study Desk</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="interior">
+                    <a href="assets/images/projects/project-03.jpg" data-caption="Wardrobe with Glass Shutters">
+                        <img src="assets/images/projects/project-03.jpg" alt="Wardrobe with Glass Shutters - H Mantra project" width="384" height="512" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Wardrobe with Glass Shutters</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="kitchen">
+                    <a href="assets/images/projects/project-04.jpg" data-caption="Modular Kitchen">
+                        <img src="assets/images/projects/project-04.jpg" alt="Modular Kitchen - H Mantra project" width="234" height="413" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Modular Kitchen</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="living-room">
+                    <a href="assets/images/projects/project-05.jpg" data-caption="Corner Seating">
+                        <img src="assets/images/projects/project-05.jpg" alt="Corner Seating - H Mantra project" width="603" height="324" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Corner Seating</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="interior">
+                    <a href="assets/images/projects/project-06.jpg" data-caption="Carved Door Panel">
+                        <img src="assets/images/projects/project-06.jpg" alt="Carved Door Panel - H Mantra project" width="348" height="525" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Carved Door Panel</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-07.jpg" data-caption="Wooden Ceiling Detail">
+                        <img src="assets/images/projects/project-07.jpg" alt="Wooden Ceiling Detail - H Mantra project" width="384" height="512" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Wooden Ceiling Detail</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="living-room">
+                    <a href="assets/images/projects/project-08.jpg" data-caption="TV Unit with Backlight">
+                        <img src="assets/images/projects/project-08.jpg" alt="TV Unit with Backlight - H Mantra project" width="384" height="512" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>TV Unit with Backlight</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="kitchen">
+                    <a href="assets/images/projects/project-09.jpg" data-caption="White Modular Kitchen">
+                        <img src="assets/images/projects/project-09.jpg" alt="White Modular Kitchen - H Mantra project" width="360" height="352" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>White Modular Kitchen</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="living-room">
+                    <a href="assets/images/projects/project-11.jpg" data-caption="TV Unit &amp; Display Partition">
+                        <img src="assets/images/projects/project-11.jpg" alt="TV Unit &amp; Display Partition - H Mantra project" width="360" height="480" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>TV Unit &amp; Display Partition</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="interior">
+                    <a href="assets/images/projects/project-12.jpg" data-caption="Sliding Wardrobe">
+                        <img src="assets/images/projects/project-12.jpg" alt="Sliding Wardrobe - H Mantra project" width="360" height="473" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Sliding Wardrobe</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-13.jpg" data-caption="Upholstered Bed">
+                        <img src="assets/images/projects/project-13.jpg" alt="Upholstered Bed - H Mantra project" width="512" height="384" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Upholstered Bed</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="interior">
+                    <a href="assets/images/projects/project-14.jpg" data-caption="Gloss Wardrobe">
+                        <img src="assets/images/projects/project-14.jpg" alt="Gloss Wardrobe - H Mantra project" width="359" height="472" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Gloss Wardrobe</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-15.jpg" data-caption="Bedroom Headboard">
+                        <img src="assets/images/projects/project-15.jpg" alt="Bedroom Headboard - H Mantra project" width="512" height="384" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Bedroom Headboard</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-16.jpg" data-caption="Bedroom Wardrobe">
+                        <img src="assets/images/projects/project-16.jpg" alt="Bedroom Wardrobe - H Mantra project" width="360" height="444" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Bedroom Wardrobe</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="kitchen">
+                    <a href="assets/images/projects/project-18.jpg" data-caption="Yellow &amp; Grey Kitchen">
+                        <img src="assets/images/projects/project-18.jpg" alt="Yellow &amp; Grey Kitchen - H Mantra project" width="360" height="537" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Yellow &amp; Grey Kitchen</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="interior">
+                    <a href="assets/images/projects/project-19.jpg" data-caption="Wooden Wardrobe">
+                        <img src="assets/images/projects/project-19.jpg" alt="Wooden Wardrobe - H Mantra project" width="360" height="358" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Wooden Wardrobe</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-21.jpg" data-caption="Ceiling with Cove Lighting">
+                        <img src="assets/images/projects/project-21.jpg" alt="Ceiling with Cove Lighting - H Mantra project" width="512" height="288" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Ceiling with Cove Lighting</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-23.jpg" data-caption="Work Desk">
+                        <img src="assets/images/projects/project-23.jpg" alt="Work Desk - H Mantra project" width="512" height="384" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Work Desk</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="mandir">
+                    <a href="assets/images/projects/project-24.jpg" data-caption="Mandir Unit">
+                        <img src="assets/images/projects/project-24.jpg" alt="Mandir Unit - H Mantra project" width="384" height="512" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Mandir Unit</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="kitchen">
+                    <a href="assets/images/projects/project-26.jpg" data-caption="Teal L-Shaped Kitchen">
+                        <img src="assets/images/projects/project-26.jpg" alt="Teal L-Shaped Kitchen - H Mantra project" width="353" height="417" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Teal L-Shaped Kitchen</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-27.jpg" data-caption="Bedroom with Wardrobe">
+                        <img src="assets/images/projects/project-27.jpg" alt="Bedroom with Wardrobe - H Mantra project" width="512" height="330" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Bedroom with Wardrobe</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="living-room">
+                    <a href="assets/images/projects/project-31.jpg" data-caption="Living Room Sofa">
+                        <img src="assets/images/projects/project-31.jpg" alt="Living Room Sofa - H Mantra project" width="512" height="384" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Living Room Sofa</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-32.jpg" data-caption="Wall Décor">
+                        <img src="assets/images/projects/project-32.jpg" alt="Wall Décor - H Mantra project" width="360" height="386" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Wall Décor</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-37.jpg" data-caption="Honeycomb Wall Unit">
+                        <img src="assets/images/projects/project-37.jpg" alt="Honeycomb Wall Unit - H Mantra project" width="360" height="203" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Honeycomb Wall Unit</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-40.jpg" data-caption="Table Base Design">
+                        <img src="assets/images/projects/project-40.jpg" alt="Table Base Design - H Mantra project" width="1002" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Table Base Design</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-41.jpg" data-caption="Sofa with Wooden Frame">
+                        <img src="assets/images/projects/project-41.jpg" alt="Sofa with Wooden Frame - H Mantra project" width="1080" height="997" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Sofa with Wooden Frame</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-43.jpg" data-caption="Honeycomb Ceiling">
+                        <img src="assets/images/projects/project-43.jpg" alt="Honeycomb Ceiling - H Mantra project" width="1080" height="1172" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Honeycomb Ceiling</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-44.jpg" data-caption="Side Table">
+                        <img src="assets/images/projects/project-44.jpg" alt="Side Table - H Mantra project" width="1080" height="1216" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Side Table</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-45.jpg" data-caption="Z-Frame Side Table">
+                        <img src="assets/images/projects/project-45.jpg" alt="Z-Frame Side Table - H Mantra project" width="1058" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Z-Frame Side Table</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-46.jpg" data-caption="Bar Stool">
+                        <img src="assets/images/projects/project-46.jpg" alt="Bar Stool - H Mantra project" width="970" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Bar Stool</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-47.jpg" data-caption="Console with Stools">
+                        <img src="assets/images/projects/project-47.jpg" alt="Console with Stools - H Mantra project" width="790" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Console with Stools</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-48.jpg" data-caption="Backlit Wooden Panel">
+                        <img src="assets/images/projects/project-48.jpg" alt="Backlit Wooden Panel - H Mantra project" width="793" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Backlit Wooden Panel</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-49.jpg" data-caption="Wooden Stools">
+                        <img src="assets/images/projects/project-49.jpg" alt="Wooden Stools - H Mantra project" width="963" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Wooden Stools</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-51.jpg" data-caption="Centre Table Set">
+                        <img src="assets/images/projects/project-51.jpg" alt="Centre Table Set - H Mantra project" width="1080" height="822" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Centre Table Set</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-52.jpg" data-caption="TV Console">
+                        <img src="assets/images/projects/project-52.jpg" alt="TV Console - H Mantra project" width="1063" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>TV Console</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-53.jpg" data-caption="Bench with Planter">
+                        <img src="assets/images/projects/project-53.jpg" alt="Bench with Planter - H Mantra project" width="1080" height="1060" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Bench with Planter</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="furniture">
+                    <a href="assets/images/projects/project-55.jpg" data-caption="Wooden Bench">
+                        <img src="assets/images/projects/project-55.jpg" alt="Wooden Bench - H Mantra project" width="1080" height="1100" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Wooden Bench</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="mandir">
+                    <a href="assets/images/projects/project-59.jpg" data-caption="Mandir Unit">
+                        <img src="assets/images/projects/project-59.jpg" alt="Mandir Unit - H Mantra project" width="851" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Mandir Unit</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="mandir">
+                    <a href="assets/images/projects/project-61.jpg" data-caption="Mandir Unit">
+                        <img src="assets/images/projects/project-61.jpg" alt="Mandir Unit - H Mantra project" width="892" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Mandir Unit</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-62.jpg" data-caption="Wall Clock Art">
+                        <img src="assets/images/projects/project-62.jpg" alt="Wall Clock Art - H Mantra project" width="1042" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Wall Clock Art</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="interior">
+                    <a href="assets/images/projects/project-63.jpg" data-caption="Wall Shelf Unit">
+                        <img src="assets/images/projects/project-63.jpg" alt="Wall Shelf Unit - H Mantra project" width="1053" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Wall Shelf Unit</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-36.jpg" data-caption="Sri Yantra Wall Art">
+                        <img src="assets/images/projects/project-36.jpg" alt="Sri Yantra Wall Art - H Mantra project" width="360" height="452" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Sri Yantra Wall Art</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="kitchen">
+                    <a href="assets/images/projects/project-35.jpg" data-caption="Modular Kitchen">
+                        <img src="assets/images/projects/project-35.jpg" alt="Modular Kitchen - H Mantra project" width="239" height="474" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Modular Kitchen</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-33.jpg" data-caption="Patterned Ceiling">
+                        <img src="assets/images/projects/project-33.jpg" alt="Patterned Ceiling - H Mantra project" width="180" height="369" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Patterned Ceiling</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-56.jpg" data-caption="Textured Wall Art">
+                        <img src="assets/images/projects/project-56.jpg" alt="Textured Wall Art - H Mantra project" width="897" height="1400" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Textured Wall Art</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-58.jpg" data-caption="3D Wall Panel">
+                        <img src="assets/images/projects/project-58.jpg" alt="3D Wall Panel - H Mantra project" width="1080" height="1367" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>3D Wall Panel</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="wall-ceiling">
+                    <a href="assets/images/projects/project-64.jpg" data-caption="Wooden Fin Wall">
+                        <img src="assets/images/projects/project-64.jpg" alt="Wooden Fin Wall - H Mantra project" width="1074" height="1168" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Wooden Fin Wall</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="interior">
+                    <a href="assets/images/projects/project-29.jpg" data-caption="Jaali Partition">
+                        <img src="assets/images/projects/project-29.jpg" alt="Jaali Partition - H Mantra project" width="360" height="455" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Jaali Partition</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="living-room">
+                    <a href="assets/images/projects/project-30.jpg" data-caption="Living Room Partition">
+                        <img src="assets/images/projects/project-30.jpg" alt="Living Room Partition - H Mantra project" width="360" height="360" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Living Room Partition</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="living-room">
+                    <a href="assets/images/projects/project-10.jpg" data-caption="Sofa Set">
+                        <img src="assets/images/projects/project-10.jpg" alt="Sofa Set - H Mantra project" width="360" height="279" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Sofa Set</figcaption>
+                </figure>
+
+                <figure class="portfolio-item" data-category="bedroom">
+                    <a href="assets/images/projects/project-34.jpg" data-caption="Bed with Wall Panelling">
+                        <img src="assets/images/projects/project-34.jpg" alt="Bed with Wall Panelling - H Mantra project" width="717" height="545" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Bed with Wall Panelling</figcaption>
+                </figure>
 
             </div>
-
         </section>
-
 
         <!-- ==================== PORTFOLIO CTA ==================== -->
 
@@ -406,9 +647,9 @@
 
         <div>
 
-            <a href="index.html">
+            <a href="index.html" aria-label="H Mantra Home">
 
-                <img id="logoh" src="assets/images/logo/logo-h.png" alt="">
+                <img class="logo-h" src="assets/images/logo/logo-h.png" alt="" width="562" height="103">
             </a>
 
             <p>
@@ -495,7 +736,7 @@
         <div>
 
             <a
-                href="https://www.instagram.com/hmantra1996/"
+                href="https://www.instagram.com/h_mantra_furniture_interior/"
                 target="_blank"
                 rel="noopener noreferrer"
             >

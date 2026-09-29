@@ -9,10 +9,8 @@
    Luxury • Architectural • Editorial • Black • Gold
    ========================================================= */
 
-/* ---------- IMPORTS ---------- */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
-
+/* ---------- FONTS ----------
+   Cormorant Garamond + Manrope load via <link> in each page <head>. */
 
 /* ---------- ROOT / DESIGN TOKENS ---------- */
 
@@ -194,11 +192,11 @@ section > header p:last-child {
 #process,
 #portfolio,
 #portfolio-hero,
+#contact-hero,
 #portfolio-cta,
 #contact-details,
 #whatsapp,
 #enquiry,
-#location,
 #final-cta {
     padding-left: 6vw;
     padding-right: 6vw;
@@ -287,13 +285,12 @@ header > nav > ul a[aria-current="page"]::after {
     width: 100%;
 }
 
-header > nav > a:last-child,
+header > nav > a:last-of-type,
 #hero a,
 #cta a,
 #portfolio-cta a,
 #final-cta a,
 #whatsapp a,
-#location a,
 form button {
     display: inline-flex;
     align-items: center;
@@ -314,13 +311,12 @@ form button {
         box-shadow var(--transition);
 }
 
-header > nav > a:last-child:hover,
+header > nav > a:last-of-type:hover,
 #hero a:hover,
 #cta a:hover,
 #portfolio-cta a:hover,
 #final-cta a:hover,
 #whatsapp a:hover,
-#location a:hover,
 form button:hover {
     background: transparent;
     color: var(--gold-light);
@@ -526,7 +522,7 @@ form button:hover {
 
 #services > div {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     border-top: 1px solid var(--border);
     border-left: 1px solid var(--border);
 }
@@ -843,7 +839,7 @@ form button:hover {
 
 #portfolio-filters button:hover,
 #portfolio-filters button:focus-visible,
-#portfolio-filters button:first-child {
+#portfolio-filters button[aria-pressed="true"] {
     border-color: var(--gold);
     background: var(--gold);
     color: var(--black);
@@ -914,8 +910,8 @@ form button:hover {
 
 #contact-hero {
     min-height: 55vh;
-    padding-top: 110px;
-    padding-bottom: 90px;
+    padding-top: 130px;
+    padding-bottom: 110px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -942,7 +938,7 @@ form button:hover {
 
 #contact-details > div {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     border-top: 1px solid var(--border);
     border-left: 1px solid var(--border);
 }
@@ -1041,39 +1037,6 @@ form button:hover {
 #enquiry select {
     appearance: none;
     cursor: pointer;
-}
-
-
-/* ---------- LOCATION ---------- */
-
-#location {
-    padding-top: var(--section-space);
-    padding-bottom: var(--section-space);
-}
-
-#location > div {
-    max-width: var(--container);
-    min-height: 300px;
-    margin: auto;
-    padding: 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    border: 1px solid var(--border);
-    background:
-        linear-gradient(135deg, rgba(212,175,55,0.07), transparent 45%),
-        var(--black-card);
-}
-
-#location > div p {
-    font-family: var(--serif);
-    font-size: clamp(1.8rem, 4vw, 3.2rem);
-    color: var(--white);
-}
-
-#location > div a {
-    margin-top: 25px;
 }
 
 
@@ -1183,7 +1146,7 @@ textarea:focus-visible {
         font-size: 0.62rem;
     }
 
-    header > nav > a:last-child {
+    header > nav > a:last-of-type {
         display: none;
     }
 
@@ -1236,6 +1199,10 @@ textarea:focus-visible {
 
     #contact-details > div {
         grid-template-columns: 1fr 1fr;
+    }
+
+    #contact-details article:last-child {
+        grid-column: 1 / -1;
     }
 
     footer {
@@ -1302,7 +1269,7 @@ textarea:focus-visible {
         padding: 8px 0;
     }
 
-    header > nav > a:last-child {
+    header > nav > a:last-of-type {
         display: inline-flex;
         flex-shrink: 0;
         min-height: 43px;
@@ -1318,11 +1285,11 @@ textarea:focus-visible {
     #process,
     #portfolio,
     #portfolio-hero,
+    #contact-hero,
     #portfolio-cta,
     #contact-details,
     #whatsapp,
     #enquiry,
-    #location,
     #final-cta {
         padding-left: 5vw;
         padding-right: 5vw;
@@ -1480,10 +1447,6 @@ textarea:focus-visible {
         grid-column: auto;
     }
 
-    #location > div {
-        min-height: 260px;
-        padding: 28px;
-    }
 
     footer {
         grid-template-columns: 1fr 1fr;
@@ -1516,11 +1479,11 @@ textarea:focus-visible {
     #process,
     #portfolio,
     #portfolio-hero,
+    #contact-hero,
     #portfolio-cta,
     #contact-details,
     #whatsapp,
     #enquiry,
-    #location,
     #final-cta {
         padding-left: 5vw;
         padding-right: 5vw;
@@ -1538,9 +1501,6 @@ textarea:focus-visible {
         font-size: 1.6rem;
     }
 
-    #location > div {
-        padding: 22px;
-    }
 
     footer {
         padding-top: 55px;
@@ -1551,7 +1511,7 @@ textarea:focus-visible {
         font-size: 2rem;
     }
 
-    #logoh {
+    .logo-h {
         width: clamp(100px, 40vw, 160px);
     }
 
@@ -1645,7 +1605,231 @@ textarea:focus-visible {
 
 }
 
-#logoh {
+.logo-h {
     width: clamp(120px, 30vw, 200px);
     height: auto;
+}
+
+/* =========================================================
+   ADDITIONS — completion pass
+   ========================================================= */
+
+/* ---------- SKIP LINK ---------- */
+.skip-link {
+    position: absolute;
+    left: 12px;
+    top: -60px;
+    z-index: 10000;
+    padding: 12px 18px;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: top var(--transition);
+}
+.skip-link:focus {
+    top: 12px;
+}
+
+/* ---------- PORTFOLIO: FILTER STATE / COUNT ---------- */
+#portfolio-gallery .portfolio-item[hidden] {
+    display: none;
+}
+#portfolio-count {
+    max-width: var(--container);
+    margin: -22px auto 26px;
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+#portfolio-gallery .portfolio-item a {
+    cursor: zoom-in;
+}
+/* captions are hover-only on desktop; always show on touch screens */
+@media (hover: none) {
+    #portfolio-gallery figcaption {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ---------- LIGHTBOX ---------- */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 64px;
+    background: rgba(5, 5, 5, 0.96);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+.lightbox.is-open {
+    display: flex;
+}
+.lightbox figure {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+.lightbox img {
+    max-width: 100%;
+    max-height: calc(100vh - 150px);
+    max-height: calc(100dvh - 150px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid var(--border);
+}
+.lightbox figcaption {
+    color: var(--gold-light);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.lightbox button {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--border);
+    background: rgba(8, 8, 8, 0.7);
+    color: var(--gold-light);
+    font-size: 1.4rem;
+    line-height: 1;
+    transition: background var(--transition), color var(--transition);
+}
+.lightbox button:hover,
+.lightbox button:focus-visible {
+    background: var(--gold);
+    color: var(--black);
+}
+.lightbox .lb-close { top: 16px; right: 16px; }
+.lightbox .lb-prev  { left: 12px;  top: 50%; transform: translateY(-50%); }
+.lightbox .lb-next  { right: 12px; top: 50%; transform: translateY(-50%); }
+body.lightbox-open {
+    overflow: hidden;
+}
+@media (max-width: 700px) {
+    .lightbox {
+        padding: 64px 10px 72px;
+    }
+    .lightbox .lb-prev,
+    .lightbox .lb-next {
+        top: auto;
+        bottom: 12px;
+        transform: none;
+    }
+    .lightbox .lb-prev { left: 12px; }
+    .lightbox .lb-next { right: 12px; }
+    .lightbox img {
+        max-height: calc(100dvh - 190px);
+    }
+}
+
+/* ---------- CONTACT: FORM NOTE / VALIDATION ---------- */
+#form-note {
+    grid-column: 1 / -1;
+    margin-top: -6px;
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+#form-note.is-error {
+    color: #e58a7a;
+}
+#enquiry input[aria-invalid="true"] {
+    border-color: #c96b5b;
+}
+
+/* ---------- IMAGES: keep intrinsic aspect ratio when width/height attrs are set ---------- */
+img {
+    height: auto;
+}
+
+/* ---------- MOBILE MENU (hamburger) ---------- */
+.nav-toggle {
+    display: none;
+    flex-shrink: 0;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--gold-light);
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: background var(--transition), color var(--transition);
+}
+.nav-toggle:hover,
+.nav-toggle[aria-expanded="true"] {
+    background: var(--gold);
+    color: var(--black);
+}
+
+@media (max-width: 700px) {
+    .nav-toggle {
+        display: grid;
+    }
+    header > nav {
+        gap: 10px;
+    }
+    header > nav > a:first-child {
+        margin-right: auto;
+    }
+    header > nav > ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 6px 5vw 18px;
+        overflow: visible;
+        background: rgba(8, 8, 8, 0.98);
+        border-bottom: 1px solid var(--border);
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+    header > nav > ul.is-open {
+        display: flex;
+    }
+    header > nav > ul a {
+        display: block;
+        padding: 16px 0;
+        font-size: 0.78rem;
+        border-bottom: 1px solid var(--border-soft);
+    }
+    header > nav > ul a::after {
+        display: none;
+    }
+}
+
+/* ---------- FINAL CTA: space between the two buttons ---------- */
+#final-cta > a + a {
+    margin-left: 12px;
+}
+@media (max-width: 430px) {
+    #final-cta > a {
+        display: flex;
+        width: 100%;
+    }
+    #final-cta > a + a {
+        margin-left: 0;
+        margin-top: 12px;
+    }
 }
