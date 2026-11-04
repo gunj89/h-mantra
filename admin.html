@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#080808">
+    <title>H Mantra | Site Manager</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+<!-- ============ APP ============ -->
+<div id="app-view">
+    <header class="topbar">
+        <div class="brand"><img src="assets/images/logo/logo-h.png" alt="H Mantra"><span>Site Manager</span></div>
+        <nav class="tabs" role="tablist">
+            <button role="tab" data-tab="hero" aria-selected="true">Home Hero</button>
+            <button role="tab" data-tab="portfolio" aria-selected="false">Portfolio</button>
+        </nav>
+        <div class="top-actions">
+            <a href="index.html" target="_blank" rel="noopener" class="link">View site &#8599;</a>
+        </div>
+    </header>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- ---- HERO TAB ---- -->
+    <section id="tab-hero" class="panel">
+        <h2>Home page hero</h2>
+        <p class="muted">The big photo (or looping video) at the top of the home page.</p>
+
+        <div class="hero-grid">
+            <div>
+                <h3>Current</h3>
+                <div id="hero-current" class="hero-preview"><span class="muted">Loading&hellip;</span></div>
+            </div>
+            <div>
+                <h3>Change it</h3>
+                <div class="seg" role="radiogroup" aria-label="Hero type">
+                    <label><input type="radio" name="heroType" value="image" checked> Photo</label>
+                    <label><input type="radio" name="heroType" value="video"> Video</label>
+                </div>
+                <label class="drop" id="hero-drop">
+                    <input type="file" id="hero-file" accept="image/*" hidden>
+                    <strong id="hero-drop-title">Choose a photo</strong>
+                    <span class="muted" id="hero-drop-hint">JPG, PNG or WebP. Tall/portrait photos work best. It is resized automatically.</span>
+                </label>
+                <div id="hero-new" class="hero-preview" hidden></div>
+                <progress id="hero-progress" max="100" value="0" hidden></progress>
+                <button id="hero-save" class="btn btn-gold" type="button" disabled>Upload &amp; publish</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---- PORTFOLIO TAB ---- -->
+    <section id="tab-portfolio" class="panel" hidden>
+        <div class="panel-head">
+            <div>
+                <h2>Portfolio</h2>
+                <p class="muted" id="pf-count">Loading&hellip;</p>
+            </div>
+            <div class="pf-tools">
+                <select id="pf-filter" aria-label="Filter by category"></select>
+                <label class="btn btn-gold" for="pf-add">+ Add photos</label>
+                <input type="file" id="pf-add" accept="image/*" multiple hidden>
+            </div>
+        </div>
+
+        <!-- staging area for new uploads -->
+        <div id="pf-stage" class="stage" hidden>
+            <h3>New photos <span class="muted">(set a title and category, then upload)</span></h3>
+            <div id="pf-stage-list" class="stage-list"></div>
+            <div class="stage-actions">
+                <button id="pf-stage-go" class="btn btn-gold" type="button">Upload all</button>
+                <button id="pf-stage-cancel" class="btn btn-ghost" type="button">Cancel</button>
+                <progress id="pf-progress" max="100" value="0" hidden></progress>
+            </div>
+        </div>
+
+        <p class="muted tip">Tip: change a title or category and it saves by itself. Use the arrows to reorder. New photos appear first.</p>
+        <div id="pf-grid" class="grid"></div>
+    </section>
+</div>
+
+<noscript><p style="padding:2rem;color:#fff">JavaScript is required.</p></noscript>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/vendor/appwrite-16.0.2.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

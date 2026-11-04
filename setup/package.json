@@ -1,0 +1,8 @@
+{
+  "name": "h-mantra-appwrite-setup",
+  "private": true,
+  "type": "module",
+  "description": "One-time Appwrite setup + content migration for the H Mantra site",
+  "scripts": { "setup": "node setup.mjs" },
+  "dependencies": { "node-appwrite": "14.1.0" }
+}

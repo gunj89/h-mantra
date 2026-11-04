@@ -58,9 +58,12 @@
     var gallery = document.getElementById("portfolio-gallery");
 
     if (gallery) {
-        var items = Array.prototype.slice.call(
-            gallery.querySelectorAll(".portfolio-item")
-        );
+        // read live, because assets/js/cms.js may replace the items
+        var getItems = function () {
+            return Array.prototype.slice.call(
+                gallery.querySelectorAll(".portfolio-item")
+            );
+        };
         var filterNav = document.getElementById("portfolio-filters");
         var countEl = document.getElementById("portfolio-count");
 
@@ -73,7 +76,7 @@
 
         var applyFilter = function (value, label) {
             var shown = 0;
-            items.forEach(function (item) {
+            getItems().forEach(function (item) {
                 var match = value === "all" || item.dataset.category === value;
                 item.hidden = !match;
                 if (match) shown++;
@@ -94,7 +97,15 @@
             });
         }
 
-        updateCount(items.length, "All");
+        updateCount(getItems().length, "All");
+
+        // portfolio was re-rendered from the CMS: keep the active filter
+        document.addEventListener("cms:portfolio", function () {
+            var active = filterNav &&
+                filterNav.querySelector('button[aria-pressed="true"]');
+            if (active) applyFilter(active.dataset.filter, active.textContent.trim());
+            else updateCount(getItems().length, "All");
+        });
 
         /* -----------------------------------------------------
            LIGHTBOX
@@ -120,7 +131,7 @@
         var opener = null;
 
         var visibleItems = function () {
-            return items.filter(function (i) { return !i.hidden; });
+            return getItems().filter(function (i) { return !i.hidden; });
         };
 
         var show = function (list, index) {
