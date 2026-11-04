@@ -12,10 +12,10 @@
     if (!C || !C.projectId) return;
 
     /* HERO VIDEO MODE
-       true  = the video autoplays muted on load, with a speaker button to turn sound on (default)
-       false = the visitor presses PLAY and the video plays WITH SOUND
+       false = the visitor presses PLAY and the video plays WITH SOUND (default)
+       true  = the video autoplays muted on load, with a speaker button to turn sound on
        (browsers only allow autoplay when muted, so these are the two options) */
-    var HERO_VIDEO_AUTOPLAY = true;
+    var HERO_VIDEO_AUTOPLAY = false;
 
     var CACHE_HERO = "hm:hero:v1";
     var CACHE_PROJECTS = "hm:projects:v1";
@@ -281,7 +281,7 @@
     /* ---------------------------------------------------------
        NEWEST UPLOADS ON THE HOME PAGE (index.html)
        - About section photo      = the newest upload
-       - "Selected Projects" (6)  = the newest 6 uploads (newest first)
+       - "Selected Projects" (6)  = the 2nd newest up to the 7th newest
        Only photos that are visible on the site are counted. Anything
        that cannot be filled (fewer uploads than slots) keeps its
        built-in photo.
@@ -305,7 +305,7 @@
     function applyRecent(list) {
         if (!list || !list.length) return;
         setPhoto(aboutImg, list[0], " - completed by H Mantra");
-        featuredImgs.forEach(function (img, i) { setPhoto(img, list[i], ""); });
+        featuredImgs.forEach(function (img, i) { setPhoto(img, list[i + 1], ""); });
     }
 
     function loadRecent() {
@@ -319,7 +319,7 @@
                     .sort(function (a, b) {                       // newest first
                         return a.$createdAt < b.$createdAt ? 1 : a.$createdAt > b.$createdAt ? -1 : b._i - a._i;
                     })
-                    .slice(0, 6)
+                    .slice(0, 7)
                     .map(function (d) {
                         return { fileId: d.fileId, title: d.title, width: d.width, height: d.height };
                     });
